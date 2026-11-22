@@ -600,6 +600,10 @@ function queueZeePosition() {
 }
 window.addEventListener('scroll', queueZeePosition, { passive: true });
 window.addEventListener('resize', queueZeePosition);
+if ('ResizeObserver' in window) {
+  new ResizeObserver(queueZeePosition).observe(document.documentElement);
+}
+
 zeeHeroButton.disabled = false;
 updateZeePosition();
 
