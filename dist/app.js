@@ -444,16 +444,21 @@ function updateZeeDock() {
   const moving = previousScroll !== undefined && Math.abs(scroll - previousScroll) > 0.5;
   zeeLastScroll = scroll;
 
-  // Keep the walk inside the reserved side gutter at every scroll position.
-  const sway = Math.sin(scroll / 370);
-  const lift = 10 + 22 * (1 - Math.cos(scroll / 430)) / 2;
-  if (motionPreference.matches && zeeTrigger !== zeeDockButton) {
-    zeeDock.style.setProperty('--zee-position', `${5 * sway}px`);
-    zeeDock.style.setProperty('--zee-lift', `${-lift}px`);
+  const viewport = document.documentElement.clientWidth;
+  const scrollRange = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+  const distance = Math.max(0, viewport - zeeDockButton.offsetWidth - 16);
+  const walkX = (position) => {
+    const progress = Math.min(1, position / scrollRange);
+    return 8 + distance * (1 + Math.cos(progress * 4 * Math.PI)) / 2;
+  };
+  const x = walkX(scroll);
+  zeeDock.style.setProperty('--zee-viewport', `${viewport}px`);
+  if (zeeTrigger !== zeeDockButton) {
+    const position = motionPreference.matches ? x : 8 + distance;
+    zeeDock.style.setProperty('--zee-position', `${position}px`);
   }
   if (moving && !zeeTrigger && motionPreference.matches) {
-    const previousSway = Math.sin(previousScroll / 370);
-    zeeDock.toggleAttribute('data-facing-left', sway < previousSway);
+    zeeDock.toggleAttribute('data-facing-left', x < walkX(previousScroll));
     if (!zeeDock.classList.contains('is-walking')) {
       zeeDock.classList.add('is-walking');
       setZeeActivity('');

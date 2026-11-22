@@ -212,11 +212,14 @@ nav .nav-cv::after{left:12px;right:12px;bottom:4px}
 .zee-dock{
   position:fixed;
   z-index:3;
-  right:12px;
+  left:0;
+  right:auto;
+  pointer-events:none;
   bottom:max(10px,env(safe-area-inset-bottom));
-  transform:translate(var(--zee-position,0px),var(--zee-lift,0px));
+  transform:translate(var(--zee-position,calc(100% - 8px)),var(--zee-lift,0px));
 }
 .zee-dock-button{
+  pointer-events:auto;
   position:relative;
   display:grid;
   place-items:center;
@@ -278,7 +281,6 @@ nav .nav-cv::after{left:12px;right:12px;bottom:4px}
 @media(max-width:700px){
   .hero-avatar>.zee-chat{position:relative;right:auto;bottom:auto;width:100%;margin-top:10px}
   .zee-dock-button{--zee-dock-height:106px}
-  footer{padding-bottom:118px}
 }
 @media(prefers-reduced-motion:no-preference){
   .zee-trigger{transition:scale 160ms ease}
@@ -819,22 +821,17 @@ a[href="#resume"][hidden],.resume[hidden]{display:none}
 @keyframes welcome-page-reveal { from { opacity: 0; } to { opacity: 1; } }
 
 .closing-section > .button { margin-top: clamp(18px, 3vw, 30px); }
-:root { --zee-gutter: 132px; --zee-content-gap: 56px; }
-main .wrap, footer .wrap {
-  width: min(1200px, calc(100% - var(--zee-gutter) - var(--zee-content-gap)));
-  margin-inline-end: max(var(--zee-gutter), calc((100% - 1200px) / 2));
-  margin-inline-start: auto;
-}
 .zee-dock-button { --zee-dock-height: 150px; }
-.zee-dock > .zee-chat { right: 0; max-height: max(90px, calc(100dvh - 214px)); }
+.zee-dock > .zee-chat {
+  pointer-events: auto;
+  right: auto;
+  left: clamp(calc(8px - var(--zee-position, 0px)), 0px,
+    calc(var(--zee-viewport, 100vw) - var(--zee-position, 0px) - min(320px, 100vw - 28px) - 8px)); max-height: max(90px, calc(100dvh - 214px)); }
 @keyframes zee-walk-bob { from { transform: translateY(0); } to { transform: translateY(-2px); } }
 @media (max-width: 1024px) {
-  :root { --zee-gutter: 114px; --zee-content-gap: 28px; }
   .zee-dock-button { --zee-dock-height: 134px; }
 }
 @media (max-width: 700px) {
-  :root { --zee-gutter: 98px; --zee-content-gap: 16px; }
-  .zee-dock { right: 8px; }
   .zee-dock-button { --zee-dock-height: 116px; }
   .zee-dock > .zee-chat { max-height: max(90px, calc(100dvh - 180px)); }
 }
@@ -1459,4 +1456,14 @@ main .closing-section > p:not(.eyebrow, .project-meta) + p {
 #contact .contact-links,
 .closing-section > .button {
   margin-top: 12px;
+}
+
+/* Content sits above the moving artwork. Opening Zee's chat raises the panel. */
+.zee-dock { z-index: 1; }
+.zee-dock:has(> .zee-chat:not([hidden])) { z-index: 10; }
+:where(main, footer) :is(p, h1, h2, h3, h4, a, button, summary, label, video) {
+  z-index: 2;
+}
+:where(main, footer) :where(p, h1, h2, h3, h4, a, button, summary, label, video) {
+  position: relative;
 }
