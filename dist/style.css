@@ -1449,3 +1449,14 @@ main .contact-info > p {
 .closing-section > .button {
   margin-top: clamp(16px, 1.8vw, 20px);
 }
+
+/* Compact spacing for contact copy and the closing CTA. */
+#contact .contact-info > p + p,
+main .closing-section > p:not(.eyebrow, .project-meta) + p {
+  margin-top: 8px;
+}
+
+#contact .contact-links,
+.closing-section > .button {
+  margin-top: 12px;
+}
