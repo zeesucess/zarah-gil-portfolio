@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zarah Gil | Digital Marketing &amp; Marketing Operations Specialist</title>
+<meta name="description" content="Zarah Gil is a Digital Marketing and Marketing Operations Specialist specializing in funnel development, CRM implementation, marketing automation, email marketing, and digital marketing systems.">
+<meta property="og:type" content="profile"><meta property="og:title" content="Zarah Gil | Digital Marketing &amp; Marketing Operations Specialist"><meta property="og:description" content="Selected work in funnel development, websites, CRM implementation, and marketing automation.">
+<!-- Add og:image when a social sharing image is supplied. -->
+<link rel="canonical" href="https://zarah-gil-portfolio.azorasystems.chatgpt.site/"><meta property="og:url" content="https://zarah-gil-portfolio.azorasystems.chatgpt.site/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Zarah Gil","alternateName":"Zee","jobTitle":"Digital Marketing & Marketing Operations Specialist","url":"https://zarah-gil-portfolio.azorasystems.chatgpt.site/","alumniOf":{"@type":"CollegeOrUniversity","name":"Our Lady of Fatima University"}}</script>
+<link rel="preload" href="/fonts/playfair-display.ttf" as="font" type="font/ttf" crossorigin><link rel="preload" as="image" href="/images/cursor-arrow.svg" media="(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)"><link rel="preload" as="image" href="/images/cursor-hand.svg" media="(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)"><link rel="stylesheet" href="/style.css?v=compact-copy"><script type="module" src="/app.js?v=kawaii-dialog"></script>
+<style>
+  html[data-welcome="open"] body > :is(.skip, .header, main, footer, .zee-dock, .zee-chat) { visibility: hidden; }
+</style>
+</head>
+<body>
+<dialog id="zee-welcome" class="zee-welcome" aria-labelledby="zee-welcome-title" aria-describedby="zee-welcome-description">
+  <div class="zee-welcome-card">
+    <div class="zee-welcome-art" aria-hidden="true">
+      <img class="zee-welcome-still" src="/images/zee-still.webp" width="1060" height="996" alt="">
+      <span class="zee-welcome-character">
+        <span class="zee-welcome-pose"></span>
+        <span class="zee-welcome-blink"></span>
+        <span class="zee-welcome-preview"></span>
+      </span>
+      <span class="zee-welcome-star">✧</span><span class="zee-welcome-star">✦</span>
+    </div>
+    <div class="zee-welcome-copy">
+      <h2 id="zee-welcome-title">Hey, you! <span aria-hidden="true">♡</span></h2>
+      <p class="zee-welcome-script">I'm glad you're here!</p>
+      <p id="zee-welcome-description">I'm Zarah, a Digital Marketing &amp; Marketing Operations Specialist. I turn ideas into functional digital experiences through funnels, websites, marketing automation, and creative problem-solving.</p>
+      <p class="zee-welcome-question">Ready to see what we can create?</p>
+      <button class="button solid zee-enter" type="button" autofocus>Explore my portfolio ✨</button>
+      <p class="zee-welcome-hint">Take a look around ♡</p>
+    </div>
+  </div>
+</dialog>
+<audio id="welcome-chime" preload="metadata" src="/audio/a-little-welcome.mp3"></audio>
+<script>
+(() => {
+  const welcomeDialog = document.getElementById('zee-welcome');
+  const welcomeChime = document.getElementById('welcome-chime');
+  const welcomeEnter = welcomeDialog.querySelector('.zee-enter');
+  const welcomeSessionKey = 'zee.welcome.entered';
+  let welcomeClosing = false;
+
+  async function playWelcome() {
+    try {
+      welcomeChime.currentTime = 0;
+      await welcomeChime.play();
+    } catch {
+      // Entry remains available if the browser or media file prevents playback.
+    }
+  }
+
+
+  function finishWelcome() {
+    document.documentElement.dataset.welcome = 'revealing';
+    welcomeDialog.close();
+    const heroHeading = document.querySelector('#home h1');
+    if (!heroHeading) return;
+    heroHeading.setAttribute('tabindex', '-1');
+    heroHeading.focus({ preventScroll: true });
+  }
+
+  function enterPortfolio(withMusic) {
+    if (welcomeClosing) return;
+    welcomeClosing = true;
+    if (withMusic) playWelcome();
+    try { sessionStorage.setItem(welcomeSessionKey, 'yes'); } catch {}
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      finishWelcome();
+    } else {
+      const fadeWelcome = () => {
+        welcomeDialog.classList.add('is-leaving');
+        setTimeout(finishWelcome, 230);
+      };
+      if (withMusic) {
+        welcomeDialog.classList.add('is-cheering');
+        setTimeout(fadeWelcome, 265);
+      } else {
+        fadeWelcome();
+      }
+    }
+  }
+
+  welcomeEnter.addEventListener('click', () => enterPortfolio(true));
+  welcomeDialog.addEventListener('cancel', (event) => {
+    event.preventDefault();
+    enterPortfolio(false);
+  });
+  window.addEventListener('pagehide', () => welcomeChime.pause());
+
+  let hasEntered = false;
+  try { hasEntered = sessionStorage.getItem(welcomeSessionKey) === 'yes'; } catch {}
+  if (!hasEntered && typeof welcomeDialog.showModal === 'function') {
+    welcomeDialog.showModal();
+    document.documentElement.dataset.welcome = 'open';
+  }
+})();
+</script>
+<a class="skip" href="#home">Skip to content</a>
+<header class="header"><div class="wrap nav"><a class="wordmark" href="#home">ZARAH GIL<span>.</span></a><nav id="nav-links" aria-label="Main navigation"><a href="#home" aria-current="location">Home</a><a href="#about">About</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav><button class="menu" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation"><i></i><i></i></button></div><span class="scroll-ribbon" aria-hidden="true"></span></header>
+
+<main>
+<section id="home" class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-intro">
+      <p class="hero-role">DIGITAL MARKETING &amp; MARKETING OPERATIONS</p>
+      <div class="hero-name"><h1><span class="hero-greeting">Hi, I'm</span> Zarah Gil<span>.</span></h1></div>
+    </div>
+    <figure class="hero-avatar"><span class="editorial-sparkles" aria-hidden="true"></span>
+      <span class="hero-avatar-note">Nice to meet you! <span aria-hidden="true">♡</span></span>
+      <button type="button" class="hero-avatar-art zee-trigger" aria-label="Chat with Zee, your portfolio guide" aria-expanded="false" aria-controls="zee-chat" disabled>
+        <picture>
+          <source media="(prefers-reduced-motion: no-preference)" type="image/webp" srcset="/images/zee-wave.webp">
+          <source media="(prefers-reduced-motion: no-preference)" type="image/gif" srcset="/images/zee-wave.gif">
+          <img src="/images/zee-still.webp" width="1060" height="996" alt="">
+        </picture>
+        <span class="hero-avatar-retouch" aria-hidden="true"></span>
+      </button>
+    </figure>
+    <div class="hero-aside">
+      <h2 class="tagline">I help business owners turn their ideas into effective websites and marketing systems so they can attract more customers and grow their businesses.</h2>
+      <p>From website design and funnel development to CRM setup and marketing automation, I bring the right tools, ideas, and systems together to turn business goals into working digital solutions.</p>
+      <div class="actions">
+        <a class="button solid" href="#work">Explore My Work <span aria-hidden="true">↗</span></a>
+        <a class="button" href="#contact">Get in Touch <span aria-hidden="true">♡</span></a>
+      </div>
+      <p class="hero-expertise">FUNNEL DEVELOPMENT · WEBSITE DESIGN · MARKETING AUTOMATION · CRM &amp; MARKETING OPERATIONS</p>
+    </div>
+    <div class="hero-meta"><span>Based in the Philippines</span><span><i></i> Open to International Opportunities</span></div>
+  </div>
+</section>
+<section id="about" class="section wrap"><div class="split"><div><p class="eyebrow">A LITTLE ABOUT ME</p><h2>Creative by nature. Curious by choice. A <span class="about-keep-together">problem-solver</span> at heart.</h2><figure class="about-image"><span class="editorial-sparkles" aria-hidden="true"></span><span class="photo-tape" aria-hidden="true"></span><img src="/images/about-portrait.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Zarah at her desk in a pink blazer, with sunset wallpapers on the monitors behind her"></figure></div><div class="copy"><p>I've always enjoyed creating things, figuring things out, and finding ways to make them better. That curiosity eventually led me into digital marketing, where I get to work with both creativity and technology.</p><p>Over the years, I've worked on websites, marketing funnels, CRM systems, and automations. I've had the chance to take ideas from planning to execution, work through technical challenges, and make sure the little details don't get overlooked.</p><p>I'm naturally hands-on. I like exploring new tools, testing ideas, solving problems, and figuring out how things work. If there's a better way to do something, I'll probably want to find it. I enjoy learning as I go, taking on new challenges, and turning what I've learned into something useful.</p><p>I'm also someone who believes there's always room to improve. Whether it's a new skill, a different approach, or a tool I've never used before, I'm always open to learning and seeing what I can create with it.</p><h3 class="eyebrow">WHAT KEEPS ME GOING</h3><p>Creating something meaningful, figuring out what seems impossible at first, and seeing an idea come to life.</p></div></div></section>
+<section id="work" class="section work">
+  <div class="wrap">
+    <section class="client-project-experience" aria-labelledby="client-project-title">
+      <p class="eyebrow">Multi-Client Project Experience</p>
+      <h2 id="client-project-title">Behind the scenes of multiple digital projects.</h2>
+      <p>At Doneverse, I worked as a Marketing Funnel Specialist, supporting multiple client projects across different industries. I was involved in building funnels, websites, and landing pages, as well as making sure each deliverable was ready for launch.</p>
+      <p>My work went beyond development. I reviewed funnel strategies and copy, checked designs and functionality, conducted funnel audits, and worked on improvements to ensure each project met quality standards.</p>
+      <p>Although I can't publicly share those client projects due to confidentiality, the work gave me valuable experience in managing different project requirements, solving problems, and delivering quality digital experiences.</p>
+      <p><strong>Funnel Development · Strategy &amp; Copy Review · Design QA · Funnel Auditing · Quality Assurance</strong></p>
+    </section>
+    <div class="section-head">
+      <p class="eyebrow">SELECTED PROJECTS</p>
+      <h2>Ideas brought to life<span>.</span></h2>
+      <p>A look at some of the projects I've personally designed, developed, and contributed to.</p>
+    </div>
+    <div id="projects" class="projects"></div></div></section>
+<section id="experience" class="section wrap split"><div><p class="eyebrow">EXPERIENCE</p><h2>My professional journey<span>.</span></h2></div><div id="timeline" class="timeline"></div></section>
+<section id="skills" class="section skills"><div class="wrap"><p class="eyebrow">CAPABILITIES</p><h2>Creative thinking. Technical execution. Digital growth<span>.</span></h2><p>I combine funnel development, website creation, marketing systems, and creative technology to help businesses build better digital experiences and grow online.</p><div id="skill-groups" class="three"></div><h3 class="tools-heading">Tools &amp; technologies</h3><div id="tool-groups" class="tools"></div></div></section>
+<section id="credentials" class="section wrap" aria-labelledby="credentials-title">
+  <div class="section-head"><h2 id="credentials-title">Certifications &amp; recognition</h2></div>
+  <article class="recognition-feature">
+    <div>
+      <p class="eyebrow">DONEVERSE QUALITY EXCELLENCE AWARD</p>
+      <h3>Recognized for Quality Excellence</h3>
+      <p>Recognized for dedication, quality, and meaningful contributions to the team.</p>
+    </div>
+    <a class="certificate-preview" href="/images/certificates/doneverse.png" target="_blank" rel="noopener"><img src="/images/certificates/doneverse-preview.webp" alt="" width="900" height="636" loading="lazy"><span>View Doneverse award <span class="certificate-new-tab">(opens in a new tab)</span></span></a>
+  </article>
+  <div class="certificate-grid">
+    <article><h3>Funnel Designer Certification</h3><p>Funnels Mastery Academy</p><p>2025 · FMA-202504-044</p><a class="certificate-preview" href="/images/certificates/funnel-designer.pdf" target="_blank" rel="noopener"><img src="/images/certificates/funnel-designer-preview.webp" alt="" width="520" height="368" loading="lazy"><span>View <span class="certificate-new-tab">Funnel Designer Certification </span>certificate <span class="certificate-new-tab">(opens in a new tab)</span></span></a></article>
+    <article><h3>Social Media Management Course</h3><p>The Social Armi</p><p>September 7, 2024</p><a class="certificate-preview" href="/images/certificates/social-media.jpg" target="_blank" rel="noopener"><img src="/images/certificates/social-media-preview.webp" alt="" width="520" height="368" loading="lazy"><span>View <span class="certificate-new-tab">Social Media Management Course </span>certificate <span class="certificate-new-tab">(opens in a new tab)</span></span></a></article>
+    <article><h3>Facebook Ads Workshop</h3><p>Excelerate Digital Marketing</p><p>October 28, 2026</p><a class="certificate-preview" href="/images/certificates/facebook-ads.png" target="_blank" rel="noopener"><img src="/images/certificates/facebook-ads-preview.webp" alt="" width="520" height="402" loading="lazy"><span>View <span class="certificate-new-tab">Facebook Ads Workshop </span>certificate <span class="certificate-new-tab">(opens in a new tab)</span></span></a></article>
+    <article><h3>GoHighLevel Workshop</h3><p>Excelerate Digital Marketing</p><p>October 28, 2026</p><a class="certificate-preview" href="/images/certificates/gohighlevel.png" target="_blank" rel="noopener"><img src="/images/certificates/gohighlevel-preview.webp" alt="" width="520" height="402" loading="lazy"><span>View <span class="certificate-new-tab">GoHighLevel Workshop </span>certificate <span class="certificate-new-tab">(opens in a new tab)</span></span></a></article>
+  </div>
+</section>
+<section id="testimonials" class="section wrap" aria-labelledby="testimonials-title">
+  <div class="section-head">
+    <h2 id="testimonials-title">Kind Words &amp; Client Feedback</h2>
+    <p>Good work is meaningful. Hearing how it makes a difference is even better.</p>
+  </div>
+  <article class="testimonial-feature">
+    <h3>A Happy Client, Happy Me!</h3>
+    <p id="rejoice-caption">Rejoice | Haus of Funnels</p>
+    <video controls playsinline preload="metadata" poster="/images/testimonials/rejoice-poster.webp" width="1280" height="720" aria-labelledby="rejoice-caption">
+      <source src="https://d1yei2z3i6k35z.cloudfront.net/10526357/68b965419fab8_Copyof80MOCKUPTEMPLATESYouTubeThumbnail2.mp4" type="video/mp4">
+      Your browser could not play this video.
+    </video>
+  </article>
+  <div class="testimonial-grid">
+      <a href="/images/testimonials/website-audit.webp" target="_blank" rel="noopener" aria-label="Open full-size website audit feedback in a new tab">
+        <img src="/images/testimonials/website-audit.webp" alt="Client feedback on the website audit’s actionable recommendations and clearer perspective on the business website." width="1174" height="593" loading="lazy">
+      </a>
+      <a href="/images/testimonials/funnel-page.webp" target="_blank" rel="noopener" aria-label="Open full-size funnel and page feedback in a new tab">
+        <img src="/images/testimonials/funnel-page.webp" alt="kase 2 [redacted] page po pala. by the way thank you so much z. maganda un feedback nakadame nako paorders simula nung pinagawa ko ito sa iyo." width="876" height="427" loading="lazy">
+      </a>
+    <a href="/images/testimonials/additional-website-audit.png" target="_blank" rel="noopener" aria-label="Open full-size additional website audit feedback in a new tab">
+      <img src="/images/testimonials/additional-website-audit.png" alt="Additional website audit feedback from a client." width="1500" height="844" loading="lazy">
+    </a>
+  </div>
+</section>
+<section id="contact" class="section contact">
+  <div class="wrap contact-layout">
+    <div class="contact-info">
+      <h2>Let's make something happen<span>.</span></h2>
+      <p>Have a role, project, or collaboration in mind? I’d love to hear what you’re working on and how I can help.</p>
+      <div id="contact-links" class="contact-links"></div>
+    </div>
+    <form id="contact-form" class="contact-form" action="/api/contact" method="post">
+      <label>Full Name<input name="name" autocomplete="name" maxlength="100" required></label>
+      <label>Email Address<input type="email" name="email" autocomplete="email" maxlength="254" required></label>
+      <label>Inquiry Type
+        <select name="inquiry" required>
+          <option value="" selected disabled>Select an inquiry type</option>
+          <option>Job Opportunity</option>
+          <option>Freelance Project</option>
+          <option>Collaboration</option>
+          <option>Other</option>
+        </select>
+      </label>
+      <label>Message<textarea name="message" rows="5" maxlength="3000" required></textarea></label>
+      <div hidden><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+      <button class="button solid" type="submit">Send Message</button>
+      <p class="contact-status" role="status" aria-live="polite"></p>
+    </form>
+    <article id="resume" class="resume" hidden>
+      <div>
+        <h3>Looking to Hire?</h3>
+        <p>Explore my professional experience, review my skills, and download my latest CV.</p>
+      </div>
+      <div id="resume-actions"></div>
+    </article>
+  </div>
+</section>
+<section class="section wrap closing-section"><h2>Every project is an opportunity to build something better.</h2><p>I enjoy bringing together design, technology, and marketing systems to create digital experiences that serve a purpose.</p><p>Whether it&#x27;s developing a funnel, building a website, connecting marketing tools, or exploring new ways to work with technology, I&#x27;m always looking for opportunities to learn, create, and make things work better.</p><a class="button" href="#contact">Let's Work Together</a></section></main>
+<footer><div class="wrap footer"><span class="editorial-sparkles" aria-hidden="true"></span><div><a class="wordmark" href="#home">ZARAH GIL<span>.</span></a><p>Digital Marketing &amp; Marketing Operations Specialist<br>Based in the Philippines</p><small>© 2026 Zarah Gil. All rights reserved.</small></div><div class="footer-links"><div id="footer-social"></div><a href="#resume">Resume / CV</a><a href="#home">Back to Top</a></div></div></footer>
+<div class="zee-dock" hidden>
+  <button type="button" class="zee-dock-button zee-trigger" aria-label="Chat with Zee, your portfolio guide" aria-expanded="false" aria-controls="zee-chat">
+    <span class="zee-roamer" aria-hidden="true"></span>
+  </button>
+</div>
+<section id="zee-chat" class="zee-chat" aria-labelledby="zee-chat-title" hidden>
+  <header class="zee-chat-header">
+    <h2 id="zee-chat-title">A little note from Zee <span aria-hidden="true">♡</span></h2>
+    <button type="button" class="zee-close" aria-label="Close Zee’s message">×</button>
+  </header>
+  <p class="zee-message" aria-live="polite" aria-atomic="true"></p>
+  <div class="zee-chat-actions">
+    <a class="zee-action" href="#work"></a>
+    <button type="button" class="zee-fact">Tell me another fun fact!</button>
+    <div class="zee-play-actions" hidden>
+      <button type="button" class="zee-fact" data-zee-act="sing">A Little Music Break</button>
+      <button type="button" class="zee-fact" data-zee-act="dance">Do a Little Dance</button>
+    </div>
+  </div>
+  <div class="zee-music" hidden>
+    <p class="zee-music-status" role="status"></p>
+  </div>
+</section>
+</body></html>

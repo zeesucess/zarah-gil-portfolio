@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+Sitemap: https://zarah-gil-portfolio.azorasystems.chatgpt.site/sitemap.xml
